@@ -1,0 +1,392 @@
+/*******************************************************************************
+ * Styles for the base elements of the theme.
+ ******************************************************************************/
+
+// Typography
+
+a, table.table a {
+  color: $theme-color;
+  &:hover {
+    color: $theme-color;
+    text-decoration: underline;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+table {
+  thead {
+    background-color: $code-color ;
+    tr th{
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  tbody {
+    tr td{
+      padding: 5px;
+    }
+  }
+}
+
+.book {
+  margin: 10px 0;
+  img {
+    width: 200px;
+  }
+  td {
+    vertical-align: bottom;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+.liner {
+  background-color: $liner-yellow-color;
+  padding: 2px;
+}
+
+// toc
+.toc {
+  color: $grey-color-dark;
+  .toc-title {
+    font-style: italic;
+  }
+  li {
+    list-style: decimal;
+    a {
+      color: $red-color-dark-1;
+    }
+  }
+}
+
+// Math
+
+.equation {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+// Caption
+
+.caption {
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+
+// Profile
+
+.profile {
+  font-family: 'Song Myung', serif;
+  align-self: flex-end;
+  margin-left: 10px;
+  p {
+    margin-bottom: 30px;
+  }
+  div {
+    padding:0 15px;
+  }
+  img {
+    width: 100%;
+  }
+}
+.tag-group {
+  display: flex;
+  padding: 0px;
+  flex-wrap: wrap;
+  .tag {
+    margin: 3px 5px;
+    list-style-type: none;
+    border: 1px;
+    padding: 3px 13px;
+    border-radius: 1em;
+    background-color: #eaeaea;
+  }
+}
+.row {
+  flex-wrap: nowrap;
+}
+// Navbar customization
+
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid $grey-color-light;
+  opacity: 0.95;
+  font-family: 'Song Myung', serif;
+}
+.navbar.navbar-light {
+  // Remove link decoration
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .navbar-nav .nav-item .nav-link {
+    &:hover {
+      color: $theme-color;
+    }
+  }
+  .navbar-nav .nav-item.active>.nav-link {
+      background-color: inherit;
+      color: $theme-color;
+      font-weight: bolder;
+      &:hover {
+        color: $theme-color;
+      }
+  }
+  .contact-icon {
+    font-size: 2rem;
+    a {
+      color: $grey-color-dark;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: $grey-color-dark;
+    border-radius: 1px;
+    margin-bottom: 4px;
+    transition: all 0.2s;
+  }
+  .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+}
+
+.navbar-toggler.collapsed {
+  .top-bar {
+    transform: rotate(0);
+  }
+  .middle-bar {
+    opacity: 1;
+  }
+  .bottom-bar {
+    transform: rotate(0);
+  }
+}
+
+
+// News
+
+.news table td {
+  font-size: 1rem;
+}
+
+
+// Social (bottom)
+
+.social {
+  text-align: center;
+  .contact-icon {
+    font-size: 4rem;
+    a {
+      color: $grey-color-dark;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+  .contact-note {
+    font-size: 0.8rem;
+  }
+}
+
+
+// Footer
+
+footer.fixed-bottom {
+  font-family: 'Song Myung', serif;
+  color: $grey-color;
+  background-color: #ffffff;
+  font-size: 0.75rem;
+  .container {
+    padding: 20px 0;
+    text-align: center;
+  }
+  a {
+    color: $grey-color;
+    font-style: italic;
+    &:hover {
+      color: lighten($theme-color, 25%);
+      text-decoration: none;
+    }
+  }
+}
+
+footer.sticky-bottom {
+  border-top: 1px solid $grey-color-light;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 0.9rem;
+}
+
+
+// Post
+
+.header-bar {
+  border-bottom: 1px solid $grey-color-light;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  h1 {
+    color: $theme-color;
+    font-size: 5rem;
+  }
+}
+
+.post-title {
+  font-family:'Song Myung', serif;
+}
+
+
+.post {
+  font-family: 'Nanum Myeongjo', serif;
+  padding: 0 2rem;
+
+  .post-content {
+    margin-top: 2rem;
+    padding: 0 2rem;
+    h2 {
+      margin: 2rem 0;
+      font-weight: 600;
+    }
+    p {
+      line-height: 1.75rem;
+    }
+  }
+
+}
+.post-list {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  li {
+    border-bottom: 1px solid $grey-color-light;
+    list-style: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .post-meta {
+      color: $grey-color;
+      font-size: 0.875rem;
+      margin-bottom: 0;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+.pagination .page-item.active .page-link {
+  background-color: $theme-color;
+  &:hover {
+    background-color: $theme-color;
+  }
+}
+
+
+// Projects
+
+.projects {
+  .grid-item {
+    width: 250px;
+    margin-bottom: 10px;
+    a {
+      color: black;
+      text-decoration: none;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+  .card {
+    margin-top: 1rem;
+    border-radius: 2rem;
+    p {
+      margin-bottom: 0.3rem;
+    }
+    .card-date {
+      font-size: 0.75rem;
+    }
+    .card-body {
+      .card-text{
+        color: black;
+      }
+    }
+  }
+  .card-title {
+    font-family:'Song Myung', serif;
+    font-size: 1.5rem;
+  }
+  .card img {
+    width: 200px;
+    align-self: center;
+  }
+}
+
+.card-tag {
+  font-family: 'Montserrat', sans-serif;
+  margin: 2px 5px 2px 12px;
+  padding: 6px 10px 6px 12px;
+  float: right;
+  background: #795548;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 0.7rem;line-height: 20px;
+  
+}
+.card-tag::before {
+  content: "\f02b";
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  margin-right: 7px; 
+}
+
+// highlight
+.highlight {
+  padding: 0 11px;
+  background-color: $code-color;
+  border-radius: 5px;
+}
+pre {
+  margin: 1rem 0;
+  color: #93a1a1;
+  font-size: inherit;
+}
+code {
+  .rouge-code {
+   padding-left: 0.5rem;
+  }
+}
+.language-plaintext {
+  background-color: $code-color;
+  padding: 4px;
+  border-radius: 7px;
+  font-size: 80%;
+  color: #212529;
+}
